@@ -40,11 +40,11 @@ const Works = () => {
                 <h1 className="text-3xl lg:text-5xl z-20 font-medium text-white font-Agency_medium">
                     We believe sports is the most thrilling thing on earth
 
-                    <span className="block text-base my-12 font-normal font-Agency_medium">
+                    <span className="block text-base my-12 font-normal font-Agency_light">
                         We create winning ideas to ignite the most distinctive campaigns in sports. Like no other we know how to find the sweet spots between brands and sports culture, which makes us the specialists in our game.
                     </span>
 
-                    <span className="block text-base my-12 font-normal font-Agency_medium">
+                    <span className="block text-base my-12 font-normal font-Agency_light">
                         We create winning ideas to ignite the most distinctive campaigns in sports. Like no other we know how to find the sweet spots between brands and sports culture, which makes us the specialists in our game.
                     </span>
                     

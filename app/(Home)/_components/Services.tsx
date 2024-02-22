@@ -36,12 +36,12 @@ const Services = () => {
                         </h2>
                     </div>
 
-                    <div className="w-full grid text-white sm:grid-cols-2 xl:grid-cols-4 grid-cols-1 gap-12">
+                    <div className="w-full grid text-white sm:grid-cols-2 xl:grid-cols-4 grid-cols-2 gap-12">
                         {
                             servicedata.map((x?: any, index?: any) => {
-                                return <div className="flex flex-col gap-8 font-bold font-Agency_medium">
+                                return <div className="flex flex-col gap-4 md:gap-8 font-bold font-Agency_medium">
                                     <img src={x?.image} alt="" className="w-10" />
-                                    <div className="flex font-medium flex-col gap-8">
+                                    <div className="flex font-medium flex-col gap-4 lg:gap-8">
                                         <h4 className="text-xl font-Agency_light">{x?.title}</h4>
                                         <h5 className="text-base font-Agency_light">{x?.description}</h5>
                                     </div>
