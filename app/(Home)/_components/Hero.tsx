@@ -7,7 +7,7 @@ const Hero = () => {
 
         <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto grid grid-cols-1 items-center justify-center lg:grid-cols-1 gap-20">
            <div className="flex flex-col gap-8">
-                <h1 className="text-6xl lg:text-[5rem] z-20 font-bold text-white uppercase font-Agency_Extended">
+                <h1 className="text-5xl md:text-5xl lg:text-[5rem] z-20 font-bold text-white uppercase font-Agency_Extended">
                     the <br /> creative <br /> agency in <br /> sports
 
 
