@@ -5,8 +5,8 @@ const Hero = () => {
         <img style={{ minHeight: "100vh", zIndex: 5 }} src="https://onenil.com/media/pages/work/future-goals/198accd6a3-1685445528/news-1-ajax-and-sandals-1920x1080-q72.jpg" alt=""
             className="object-cover absolute h-full w-full" />
 
-        <div className="flex flex-col gap-12 pt-20 h-full w-full">
-            <div className="h-full z-20 pt-40 pb-12 w-[90%] max-w-custom_1 mx-auto grid items-start justify-center grid-cols-custom_2 gap-8">
+        <div className="flex flex-col gap-12 h-full w-full">
+            <div className="h-full z-20 pt-40 pb-20 w-[90%] max-w-custom_1 mx-auto grid items-start justify-center grid-cols-custom_2 gap-8">
                 <div className="w-full">
                     <h4 className="lg:text-xl z-20 font-normal text-white uppercase font-Agency_Extended">
                         case
@@ -43,7 +43,7 @@ const Hero = () => {
                             <span className="block text-base text-white w-[90%] font-light font-Agency_light">
                                 2022
                             </span>
-                        </div> 
+                        </div>
 
 
 
@@ -53,8 +53,8 @@ const Hero = () => {
             </div>
 
 
-            <div className="h-full z-20 pt-20 pb-32 w-[90%] max-w-custom_1 mx-auto items-start justify-center flex flex-col gap-8">
-                
+            <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto items-start justify-center flex flex-col gap-8">
+
                 <div className="flex flex-col items-start gap-8">
                     <h1 className="text-4xl lg:text-5xl z-20 font-normal text-white uppercase font-Agency_Extended">
                         Ajax and Sandals Resorts join forces to facilitate football in The Caribbean

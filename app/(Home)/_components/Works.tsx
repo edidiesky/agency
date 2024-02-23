@@ -11,8 +11,7 @@ const Works = () => {
                 </h1>
             </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="absolute h-full w-full bg-[rgba(0,0,0,.7)] z-10"></div>
-
+            
                 <div className="w-full lg:mt-24 relative h-[35rem] flex items-end">
                     <img src="https://onenil.com/media/pages/work/heineken-cheers-to-you/03bf898036-1686575712/schermafbeelding-2023-06-12-om-15.14.56.png"
                      alt="" className="absolute h-full object-cover w-full z-10" />
