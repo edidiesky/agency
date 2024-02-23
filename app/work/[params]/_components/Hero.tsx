@@ -1,8 +1,8 @@
 import React from 'react';
 const Hero = () => {
     return <div style={{ minHeight: "100vh" }} className=' relative w-full flex items-center justify-center'>
-        <div  className="absolute h-full w-full bg-[rgba(0,0,0,.7)] z-10"></div>
-        <img style={{ minHeight: "100vh", zIndex:5 }} src="https://onenil.com/media/pages/home/24af6ef326-1685445527/afcajax-frenkie-header-1920x1080-q72.jpg" alt=""
+        <div style={{ background:"linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.2) 100%)"}} className="absolute h-full w-full z-10"></div>
+        <img style={{ minHeight: "100vh", zIndex: 5 }} src="https://onenil.com/media/pages/work/future-goals/198accd6a3-1685445528/news-1-ajax-and-sandals-1920x1080-q72.jpg" alt=""
          className="object-cover absolute h-full w-full" />
 
         <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto grid grid-cols-1 items-center justify-center lg:grid-cols-1 gap-20">
