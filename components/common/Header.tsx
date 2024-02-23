@@ -13,7 +13,7 @@ type HeaderProps = {
 }
 export const Header: React.FC<HeaderProps> = ({ sidebar, setSidebar, type }) => {
   return (
-    <div className="py-8 pb-5 fixed w-full  md:px-12 top-0 z-40">
+    <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-40">
       <div className="w-[90%] m-auto max-w-custom flex items-center justify-between">
         <h2 className={`text-2xl md:text-4xl ${type ? 'text-[#000]' : 'text-[#Fff]'}`}>
           <span className="font-Agency_Extended">ONE: </span> NILL</h2>
