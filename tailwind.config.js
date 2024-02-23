@@ -19,6 +19,7 @@ module.exports = {
       gridTemplateColumns: {
         // Simple 16 column grid
         custom: "1fr 30%",
+        custom_2: "20% 1fr",
       },
       // Blog_Styles
       fontFamily: {
