@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 import React from "react";
 export const Footer = () => {
   return (
-    <div className="pb-20 pt-32 w-full">
+    <div className="pb-20 pt-32 bg-[#000] w-full">
       <div className="w-[90%] max-w-custom_1 mx-auto flex flex-col gap-20">
         <div className="w-full">
           <h2 className="text-4xl font-bold font-Agency_medium text-white">

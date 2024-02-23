@@ -3,7 +3,7 @@ import React from 'react';
 const Works = () => {
     return <div className='py-4 w-full'>
        
-        <div className=" max-w-custom_1 mx-auto py-20 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className=" max-w-custom_1 mx-auto pt-32 pb-52 grid grid-cols-1 md:grid-cols-3 gap-4">
 
             <div className="w-full lg:mt-24 relative h-[35rem] flex items-end">
                 <img src="https://onenil.com/media/pages/work/heineken-cheers-to-you/03bf898036-1686575712/schermafbeelding-2023-06-12-om-15.14.56.png"

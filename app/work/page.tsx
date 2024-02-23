@@ -14,7 +14,7 @@ export default function Page() {
             <Header type={true} />
             <Hero />
             <Works />
-            <Footer />
+            <Footer/>
         </div>
     );
 }
