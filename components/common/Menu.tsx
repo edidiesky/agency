@@ -8,18 +8,22 @@ const linklist = [
     {
         title: "Work",
         path: "/Work",
+        color:"#FFC700"
     },
     {
         title: "Archive",
         path: "/Archive",
+        color:"#00FAFF"
     },
     {
         title: "Jobs",
         path: "/Jobs",
+        color:"#0433FF"
     },
     {
         title: "Contact",
         path: "/Contact",
+        color:"#FF00B0"
     }
 ]
 const variants = {
@@ -90,10 +94,19 @@ const Menu: React.FC<menuType> = ({ menu, setMenu }) => {
         </div>
 
         <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto grid grid-cols-1 items-center justify-center lg:grid-cols-custom gap-20">
-            <Text
-                menu={menu}
-                setMenu={setMenu}
-            />
+            <AnimatePresence>
+                {
+                    menu && <div className="flex flex-col gap-1">
+                        {
+                            linklist?.map((x?: any, index?: any) => {
+                                return <Text index={index} x={x} menu={menu} setMenu={setMenu} />
+                            })
+                        }
+
+                    </div>
+
+                }
+            </AnimatePresence>
 
             <AnimatePresence>
                 {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link';
 const linklist = [
@@ -43,36 +43,49 @@ const textvariants = {
 
 type menuType = {
     menu: boolean,
+    x?: any,
+    index?: any,
     setMenu: (val: boolean) => void;
 }
-const Text: React.FC<menuType> = ({ menu, setMenu }) => {
-    return <div className="h-full">
-        <AnimatePresence>
-            {
-                menu && <div className="flex flex-col gap-3">
-                    {
-                        linklist?.map((x?: any, index?: any) => {
-                            return <div key={index} className="menulist overflow-hidden">
-                                <motion.h1
-                                    variants={textvariants}
-                                    initial={'initial'}
-                                    animate={'enter'}
-                                    exit={'exit'}
-                                    custom={index}
-                                    className="list text-5xl lg:text-7xl w-full z-20 font-normal text-white uppercase font-Agency_Extended">
-                                    <Link
-                                        href={`${x?.path}`}
-                                    >
-                                        {x?.title}</Link>
-                                </motion.h1>
-                            </div>
-                        })
-                    }
+const Text: React.FC<menuType> = ({ menu, setMenu, x, index }) => {
+    const [active, setActive] = useState(false)
 
-                </div>
+    return <div className="h-full overflow-hidden">
+        <motion.h1
+            variants={textvariants}
+            initial={'initial'}
+            animate={'enter'}
+            exit={'exit'}
+            custom={index}
+            key={index}
+            onMouseLeave={() => setActive(false)}
+            onMouseOver={() => setActive(true)}
+            className="list text-5xl lg:text-7xl border-b border-[rgba(255,255,255,.09)] h-20 overflow-hidden w-full z-20 
+                                relative font-normal text-white uppercase font-Agency_Extended">
 
-            }
-        </AnimatePresence>
+            <motion.div
+                animate={{ top: active ? '-100%' : "0" }}
+                transition={{ duration: .5, ease: [0.75, 0, 0.24, 1] }}
+                className="menulist relative h-full w-full">
+
+                <h1
+                    className="list text-5xl lg:text-7xl w-full z-20 font-normal text-white uppercase font-Agency_Extended">
+                    <Link
+                        href={`${x?.path}`}
+                    >
+                        {x?.title}</Link>
+                </h1>
+
+                <h1
+                    style={{ color: `${x?.color}` }}
+                    className="list text-5xl absolute text-[#00FAFF] top-[100%] left-0 lg:text-7xl w-full z-20 font-normaluppercase font-Agency_Extended bg-cover bg-blend-multiply">
+                    <Link
+                        href={`${x?.path}`}
+                    >
+                        {x?.title}</Link>
+                </h1>
+            </motion.div>
+        </motion.h1>
 
     </div>
 }
