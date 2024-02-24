@@ -11,7 +11,9 @@ export default function Page({ params }: { params: { food: string } }) {
 
     return (
         <div className="w-full min-h-full bg-[#000] overflow-hidden">
-            <Header />
+            <Header setMenu={function (val: boolean): void {
+                throw new Error('Function not implemented.');
+            } } />
             <Hero />
             <Works />
             <Footer />

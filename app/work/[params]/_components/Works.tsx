@@ -67,10 +67,10 @@ const Works = () => {
                 
                 <div className="flex flex-col gap-6">
                     <h1 className="text-3xl lg:text-5xl leading-[1.2] z-20 font-normal text-white font-Agency_bold">
-                        "We do everything in our power to inspire future generations"
+                       `&rdquo;` "We do everything in our power to inspire future generations"
                     </h1>
                     <span className="block text-base my-12 font-normal text-white font-Agency_light">
-                        Edwin van der Sar, CEO AFC Ajax: “Ajax is on a mission to impact the future of football on a global level. This starts with the youth – our next generation. That is why we do everything in our power to inspire future generations. Together with Sandals Resorts and the Sandals Foundation we are eager to facilitate impactful football programs for children in Curaçao and the rest of the Caribbean – starting here at MGR Niewindt College in Curaçao.”
+                        Edwin van der Sar, CEO AFC Ajax: `&rdquo;` “Ajax is on a mission to impact the future of football on a global level. This starts with the youth – our next generation. That is why we do everything in our power to inspire future generations. Together with Sandals Resorts and the Sandals Foundation we are eager to facilitate impactful football programs for children in Curaçao and the rest of the Caribbean – starting here at MGR Niewindt College in Curaçao.”
                     </span>
                 </div>
 
@@ -111,7 +111,7 @@ const Works = () => {
                         Giving back to the local communities
                     </h1>
                     <span className="block text-base my-12 font-normal text-white font-Agency_light">
-                        Heidi Clarke, Executive Director of the Sandals Foundation: ‘’Future Goals brilliantly encapsulates Sandals’ unwavering commitment to empower our islands in the Caribbean through our philanthropic arm, the Sandals Foundation, and our core pillars of education, environment and community. Enveloping ourselves in the destination was part of the blueprint as we rolled out the plans for Sandals Royal Curaçao – a new island for Sandals and a new opportunity to expand our impact — and this one-of-a-kind partnership with Ajax is a sign of our promise to generations to come.”
+                        Heidi Clarke, Executive Director of the Sandals Foundation: `&rdquo;`‘’Future Goals brilliantly encapsulates Sandals’ unwavering commitment to empower our islands in the Caribbean through our philanthropic arm, the Sandals Foundation, and our core pillars of education, environment and community. Enveloping ourselves in the destination was part of the blueprint as we rolled out the plans for Sandals Royal Curaçao – a new island for Sandals and a new opportunity to expand our impact — and this one-of-a-kind partnership with Ajax is a sign of our promise to generations to come.”
                     </span>
                 </div>
             </div>

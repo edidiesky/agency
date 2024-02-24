@@ -39,7 +39,7 @@ const Services = () => {
                     <div className="w-full grid text-white sm:grid-cols-2 xl:grid-cols-4 grid-cols-2 gap-12">
                         {
                             servicedata.map((x?: any, index?: any) => {
-                                return <div className="flex flex-col gap-4 md:gap-8 font-bold font-Agency_medium">
+                                return <div key={index} className="flex flex-col gap-4 md:gap-8 font-bold font-Agency_medium">
                                     <img src={x?.image} alt="" className="w-10" />
                                     <div className="flex font-medium flex-col gap-4 lg:gap-8">
                                         <h4 className="text-xl font-Agency_light">{x?.title}</h4>
@@ -66,8 +66,10 @@ const Services = () => {
                         <img src="https://onenil.com/media/pages/home/61e73134a1-1685445527/e6107-18-1080x.jpg" alt="" className="absolute object-cover h-full w-full z-10" />
                         <div className="max-w-custom_1 py-16 md:py-24 z-20 relative mx-auto w-[90%] pl-12 md:pl-20 pr-12 flex flex-col gap-12">
                             <h2 className="text-4xl font-medium text-white font-Agency_bold">
+                                
                                 <span className="block mb-8 font-medium text-base">Get Inspired by our work</span>
                                 Explore our Infinite archive, full of inspiration
+
                             </h2>
 
                             <span className="block mb-8 text-text_grey_1 font-light font-Agency_light text-sm">Explore our Archive</span>

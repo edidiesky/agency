@@ -99,7 +99,7 @@ const Menu: React.FC<menuType> = ({ menu, setMenu }) => {
                     menu && <div className="flex flex-col gap-1">
                         {
                             linklist?.map((x?: any, index?: any) => {
-                                return <Text index={index} x={x} menu={menu} setMenu={setMenu} />
+                                return <Text index={index} key={index} x={x} menu={menu} setMenu={setMenu} />
                             })
                         }
 
