@@ -2,13 +2,14 @@
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button";
 import { HiBars2 } from "react-icons/hi2";
-import React from "react";
+import React, { useState } from "react";
 type HeaderProps = {
   menu?: boolean,
   type?: boolean,
   setMenu: (val: boolean) => void;
 }
 export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
+  const [active, setActive] = useState(false)
   return (
     <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-40">
       <div className="w-[90%] m-auto max-w-custom flex items-center justify-between">
@@ -16,12 +17,12 @@ export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
           <span className="font-Agency_Extended">ONE: </span> NILL</h2>
         <div className="flex items-center gap-4">
           <div
-            onMouseLeave={() => setMenu(false)}
-            onMouseOver={() => setMenu(true)}
+            onMouseLeave={() => setActive(false)}
+            onMouseOver={() => setActive(true)}
 
             className="h-14 cursor-pointer relative overflow-hidden min-w-52 rounded-[40px] text-lg bg-transparent text-text_dark_1 font-Agency_medium font-normal">
             <motion.div
-              animate={{ top: menu ? '-100%' : "0" }}
+              animate={{ top: active ? '-100%' : "0" }}
               transition={{ duration: .5, ease: [0.75, 0, 0.24, 1] }}
               className="flex relative h-full min-w-52 flex-col rounded-[40px]">
               <Button

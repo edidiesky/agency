@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { AnimatePresence, motion } from 'framer-motion'
 import { RxCross1 } from "react-icons/rx";
 import Link from 'next/link';
+import Text from './Text';
 const linklist = [
     {
         title: "Work",
@@ -74,34 +75,6 @@ type menuType = {
 }
 const Menu: React.FC<menuType> = ({ menu, setMenu }) => {
     const menuref = useRef(null)
-    // useLayoutEffect(() => {
-    //     const timeline = gsap.timeline({ paused: true })
-    //     // gsap.set(menuref?.current, {
-    //     //     clipPath: "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)"
-    //     // })
-
-    //     gsap.set('.menulist .list', {
-    //         y: 240
-    //     })
-
-    //     timeline.to(menuref?.current, {
-    //         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-    //         duration: 1.5,
-    //         ease: "power4.inOut"
-    //     }).to('.menulist .list', {
-    //         y: 0,
-    //         duration: 1.5,
-    //         stagger: 0.2,
-    //         ease: "power4.out"
-    //     }, "-=1")
-
-    //     if (menu) {
-    //         timeline.reverse()
-    //     } else {
-    //         timeline.play()
-    //     }
-    // }, [menu])
-    // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
     return <motion.div
         variants={variants}
         initial={'close'}
@@ -117,32 +90,10 @@ const Menu: React.FC<menuType> = ({ menu, setMenu }) => {
         </div>
 
         <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto grid grid-cols-1 items-center justify-center lg:grid-cols-custom gap-20">
-            <AnimatePresence>
-                {
-                    menu && <div className="flex flex-col gap-3">
-                        {
-                            linklist?.map((x?: any, index?: any) => {
-                                return <div key={index} className="menulist overflow-hidden">
-                                    <motion.h1
-                                        variants={textvariants}
-                                        initial={'initial'}
-                                        animate={'enter'}
-                                        exit={'exit'}
-                                        custom={index}
-                                        className="list text-5xl lg:text-7xl w-full z-20 font-normal text-white uppercase font-Agency_Extended">
-                                        <Link
-                                            href={`${x?.path}`}
-                                        >
-                                            {x?.title}</Link>
-                                    </motion.h1>
-                                </div>
-                            })
-                        }
-
-                    </div>
-
-                }
-            </AnimatePresence>
+            <Text
+                menu={menu}
+                setMenu={setMenu}
+            />
 
             <AnimatePresence>
                 {

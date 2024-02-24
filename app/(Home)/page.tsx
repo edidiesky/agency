@@ -10,7 +10,7 @@ import { Header } from '@/components/common/Header';
 import Menu from '@/components/common/Menu';
 import { useState } from 'react';
 export default function Home() {
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(true)
   return (
     <div className="w-full bg-[#000] font-Agency_medium min-h-full">
       <AnimatePresence>
