@@ -7,11 +7,11 @@ import { HiBars2 } from "react-icons/hi2";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import React from "react";
 type HeaderProps = {
-  sidebar?: boolean,
+  menu?: boolean,
   type?: boolean,
-  setSidebar?: (val: boolean) => void;
+  setMenu: (val: boolean) => void;
 }
-export const Header: React.FC<HeaderProps> = ({ sidebar, setSidebar, type }) => {
+export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
   return (
     <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-40">
       <div className="w-[90%] m-auto max-w-custom flex items-center justify-between">
@@ -22,9 +22,9 @@ export const Header: React.FC<HeaderProps> = ({ sidebar, setSidebar, type }) => 
             Get in Touch
           </Button>
           {
-            type ? <div className={"icons w-12 h-12 text-text_dark_1 text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
+            type ? <div onClick={()=> setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer text-text_dark_1 text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
               <HiBars2 />
-            </div> : <div className={"icons w-12 h-12 text-white text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
+            </div> : <div onClick={()=> setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer text-white text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
               <HiBars2 />
             </div>
           }
