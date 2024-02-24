@@ -16,7 +16,7 @@ export default function Home() {
       <AnimatePresence>
         <Menu menu={menu} setMenu={setMenu} />
       </AnimatePresence>
-      
+
 
       <Header menu={menu} setMenu={setMenu} />
       <Hero />

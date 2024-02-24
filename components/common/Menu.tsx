@@ -7,22 +7,22 @@ import Text from './Text';
 const linklist = [
     {
         title: "Work",
-        path: "/Work",
+        path: "/work",
         color:"#FFC700"
     },
     {
         title: "Archive",
-        path: "/Archive",
+        path: "/archive",
         color:"#00FAFF"
     },
     {
         title: "Jobs",
-        path: "/Jobs",
+        path: "/jobs",
         color:"#0433FF"
     },
     {
         title: "Contact",
-        path: "/Contact",
+        path: "/contact",
         color:"#FF00B0"
     }
 ]

@@ -50,7 +50,7 @@ type menuType = {
 const Text: React.FC<menuType> = ({ menu, setMenu, x, index }) => {
     const [active, setActive] = useState(false)
 
-    return <div className="h-full overflow-hidden">
+    return <div className="h-full overflow-hidden flex items-center justify-center">
         <motion.h1
             variants={textvariants}
             initial={'initial'}
@@ -60,7 +60,7 @@ const Text: React.FC<menuType> = ({ menu, setMenu, x, index }) => {
             key={index}
             onMouseLeave={() => setActive(false)}
             onMouseOver={() => setActive(true)}
-            className="list text-5xl lg:text-7xl border-b border-[rgba(255,255,255,.09)] h-20 overflow-hidden w-full z-20 
+            className="list text-5xl lg:text-7xl border-b text-start border-[rgba(255,255,255,.05)] h-20 overflow-hidden w-full z-20 
                                 relative font-normal text-white uppercase font-Agency_Extended">
 
             <motion.div
@@ -80,6 +80,7 @@ const Text: React.FC<menuType> = ({ menu, setMenu, x, index }) => {
                     style={{ color: `${x?.color}` }}
                     className="list text-5xl absolute text-[#00FAFF] top-[100%] left-0 lg:text-7xl w-full z-20 font-normaluppercase font-Agency_Extended bg-cover bg-blend-multiply">
                     <Link
+                        className='w-full'
                         href={`${x?.path}`}
                     >
                         {x?.title}</Link>
