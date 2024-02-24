@@ -6,6 +6,7 @@ const nextConfig = {
       "www.notion.so",
       "images.ctfassets.net",
       "miro.medium.com",
+      "onenil.com",
     ],
   },
 };
