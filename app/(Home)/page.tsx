@@ -1,4 +1,6 @@
 'use client';
+import { AnimatePresence, motion } from 'framer-motion'
+
 import Hero from './_components/Hero'
 import Works from './_components/Works'
 import Services from './_components/Services'
@@ -11,7 +13,11 @@ export default function Home() {
   const [menu, setMenu] = useState(false)
   return (
     <div className="w-full bg-[#000] font-Agency_medium min-h-full">
-      <Menu menu={menu} setMenu={setMenu} />
+      <AnimatePresence>
+        <Menu menu={menu} setMenu={setMenu} />
+      </AnimatePresence>
+      
+
       <Header menu={menu} setMenu={setMenu} />
       <Hero />
       <Works />
