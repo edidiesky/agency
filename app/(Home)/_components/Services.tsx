@@ -23,7 +23,7 @@ const servicedata = [
 ]
 const Services = () => {
     return <>
-        <div data-lenis-prevent className='w-full'>
+        <div data-scroll data-scroll-speed='4' className='w-full'>
             {/* <h2 className="fontextrabold text-4xl">Services section</h2> */}
             <div className=" w-full pt-32 pb-32">
                 <div className="w-[90%] max-w-custom_1 mx-auto flex flex-col gap-20">
@@ -66,7 +66,7 @@ const Services = () => {
                         <img src="https://onenil.com/media/pages/home/61e73134a1-1685445527/e6107-18-1080x.jpg" alt="" className="absolute object-cover h-full w-full z-10" />
                         <div className="max-w-custom_1 py-16 md:py-24 z-20 relative mx-auto w-[90%] pl-12 md:pl-20 pr-12 flex flex-col gap-12">
                             <h2 className="text-4xl font-medium text-white font-Agency_bold">
-                                
+
                                 <span className="block mb-8 font-medium text-base">Get Inspired by our work</span>
                                 Explore our Infinite archive, full of inspiration
 

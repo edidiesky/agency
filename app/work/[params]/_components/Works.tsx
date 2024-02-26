@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Works = () => {
-    return <div className='py-4 w-full'>
+    return <div data-scroll className='py-4 w-full'>
         <div className="h-full z-20 py-12 w-[95%] max-w-custom_1 mx-auto items-start flex flex-col gap-20">
 
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">

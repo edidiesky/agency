@@ -1,6 +1,6 @@
 import React from 'react';
 const Hero = () => {
-    return <div style={{ minHeight: "100vh" }} className=' relative w-full flex items-center justify-center'>
+    return <div data-scroll style={{ minHeight: "100vh" }} className=' relative w-full flex items-center justify-center'>
         <div style={{ background: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.2) 100%)" }} className="absolute h-full w-full z-10"></div>
         <img style={{ minHeight: "100vh", zIndex: 5 }} src="https://onenil.com/media/pages/work/future-goals/198accd6a3-1685445528/news-1-ajax-and-sandals-1920x1080-q72.jpg" alt=""
             className="object-cover absolute h-full w-full" />

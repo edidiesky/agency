@@ -1,6 +1,6 @@
 import React from 'react';
 const Banner = () => {
-    return <div className='h-[20rem] lg:h-[25rem] relative w-full flex items-center justify-center'>
+    return <div data-scroll className='h-[20rem] lg:h-[25rem] relative w-full flex items-center justify-center'>
         <div style={{ zIndex: 10 }} className="absolute h-full w-full bg-[rgba(0,0,0,.5)] z-10"></div>
         <img style={{ zIndex: 5 }} src="https://onenil.com/media/pages/home/b8ff3c9f83-1685445527/rocket-01-1920x1080-q72.jpg" alt="" 
         className="object-cover absolute h-full w-full" />
