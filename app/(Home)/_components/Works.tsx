@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Works = () => {
-    return <div className='py-20 w-full'>
+    return <div data-lenis-prevent className='py-20 w-full'>
         <div className="h-full z-20 py-32 w-[95%] max-w-custom_1 mx-auto items-start flex flex-col gap-20">
             <div className="flex flex-col gap-8">
                 <h1 className="text-4xl lg:text-6xl z-20 font-bold text-white uppercase font-Agency_Extended">

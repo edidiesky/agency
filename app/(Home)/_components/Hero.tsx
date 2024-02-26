@@ -1,7 +1,7 @@
 import Logo from '@/assets/svg/logo';
 import React from 'react';
 const Hero = () => {
-    return <div style={{ minHeight: "100vh" }} className=' relative w-full flex z-20 items-center justify-center'>
+    return <div data-lenis-prevent style={{ minHeight: "100vh" }} className=' relative w-full flex z-20 items-center justify-center'>
         <div  className="absolute h-full w-full bg-[rgba(0,0,0,.7)] z-10"></div>
         <img style={{ minHeight: "100vh", zIndex:5 }} src="https://onenil.com/media/pages/home/24af6ef326-1685445527/afcajax-frenkie-header-1920x1080-q72.jpg" alt=""
          className="object-cover absolute h-full w-full" />

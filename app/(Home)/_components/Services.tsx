@@ -23,7 +23,7 @@ const servicedata = [
 ]
 const Services = () => {
     return <>
-        <div className='w-full'>
+        <div data-lenis-prevent className='w-full'>
             {/* <h2 className="fontextrabold text-4xl">Services section</h2> */}
             <div className=" w-full pt-32 pb-32">
                 <div className="w-[90%] max-w-custom_1 mx-auto flex flex-col gap-20">
