@@ -1,29 +1,27 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React, { useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion'
 import { RxCross1 } from "react-icons/rx";
-import Link from 'next/link';
 import Text from './Text';
 const linklist = [
     {
         title: "Work",
         path: "/work",
-        color:"#FFC700"
+        color: "#FFC700"
     },
     {
         title: "Archive",
         path: "/archive",
-        color:"#00FAFF"
+        color: "#00FAFF"
     },
     {
         title: "Jobs",
         path: "/jobs",
-        color:"#0433FF"
+        color: "#0433FF"
     },
     {
         title: "Contact",
         path: "/contact",
-        color:"#FF00B0"
+        color: "#FF00B0"
     }
 ]
 const variants = {
@@ -39,23 +37,6 @@ const variants = {
     }
 }
 
-const textvariants = {
-    initial: {
-        opacity: "0",
-        y: 100,
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1] }
-    },
-    enter: (index?: any) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1], delay: 0.7 + index * 0.1 }
-    }),
-    exit: (index?: any) => ({
-        opacity: 0,
-        y: 100,
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1], delay: 0.1 + index * 0.1 }
-    }),
-}
 
 const locationvariants = {
     initial: {

@@ -1,24 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link';
-const linklist = [
-    {
-        title: "Work",
-        path: "/Work",
-    },
-    {
-        title: "Archive",
-        path: "/Archive",
-    },
-    {
-        title: "Jobs",
-        path: "/Jobs",
-    },
-    {
-        title: "Contact",
-        path: "/Contact",
-    }
-]
 
 
 const textvariants = {

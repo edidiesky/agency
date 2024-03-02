@@ -8,7 +8,7 @@ const Works = () => {
                     SELECTED
                     <br />
                     WORKS
-                </h1>
+                </h1>   
             </div>
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
 
