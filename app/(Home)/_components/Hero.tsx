@@ -6,9 +6,9 @@ const Hero = () => {
         <img style={{ minHeight: "100vh", zIndex: 5 }} src="https://onenil.com/media/pages/home/24af6ef326-1685445527/afcajax-frenkie-header-1920x1080-q72.jpg" alt=""
             className="object-cover absolute h-full w-full" />
 
-        <div className="h-full z-20 pt-40 pb-32 w-[90%] max-w-custom_1 mx-auto grid grid-cols-1 items-start justify-center lg:grid-cols-2 gap-20">
+        <div className="h-full z-20 pt-40 pb-32 w-[95%] max-w-custom_1 mx-auto grid grid-cols-1 items-start justify-center lg:grid-cols-custom gap-6">
             <div className="flex flex-col gap-8">
-                <h1 className="text-5xl lg:text-6xl w-full z-20 font-normal text-white uppercase font-Agency_Extended">
+                <h1 className="text-5xl lg:text-[75.13px] leading-[68px] w-full z-20 font-normal text-white uppercase font-Agency_Extended">
                     the <br /> creative <br /> agency in <br /> sports
 
 

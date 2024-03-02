@@ -26,14 +26,14 @@ const linklist = [
 ]
 const variants = {
     open: {
-        width: "100vw",
         height: "100vh",
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1] }
+        top:0,
+        transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] }
     },
     close: {
-        width: 0,
         height: 0,
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1], delay: .9 }
+        transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: .9 },
+        top:'-100%'
     }
 }
 
