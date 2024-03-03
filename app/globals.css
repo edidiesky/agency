@@ -93,8 +93,17 @@
   src: url("../assets/fonts/MonumentExtended-Regular.ttf") format("truetype");
 }
 
-
-
+.line .word {
+  overflow: hidden;
+}
+.home_text_2 .line .word {
+  overflow: hidden;
+line-height: 1;
+}
+.word {
+  overflow: hidden;
+}
+/* 
 html.has-scroll-smooth {
   overflow: hidden;
 }
@@ -171,4 +180,4 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
-}
+} */
