@@ -27,13 +27,13 @@ const linklist = [
 const variants = {
     open: {
         height: "100vh",
-        top:0,
+        top: 0,
         transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] }
     },
     close: {
         height: 0,
         transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: .9 },
-        top:'-100%'
+        top: '-100%'
     }
 }
 
@@ -41,11 +41,11 @@ const variants = {
 const locationvariants = {
     initial: {
         opacity: "0",
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1] }
+        transition: { duration: 1.3, ease: [0.76, 0, 0.24, 1] }
     },
     enter: (index?: any) => ({
         opacity: 1,
-        transition: { duration: .8, ease: [0.76, 0, 0.24, 1], delay: 0.5 }
+        transition: { duration: 1.8, ease: [0.76, 0, 0.24, 1], delay: 0.5 }
     }),
     exit: {
         opacity: 0,

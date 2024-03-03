@@ -1,4 +1,9 @@
-import React from 'react';
+
+"use client"
+import React, { useEffect, useRef } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const servicedata = [
     {
         image: "https://onenil.com/media/pages/home/9a99d95339-1685445527/target.svg",
@@ -22,14 +27,67 @@ const servicedata = [
     }
 ]
 const Services = () => {
+
+    const titleref = useRef(null);
+    const imageRef = useRef < HTMLDivElement[]>([]);
+    imageRef.current = []
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        const homeHeroTitleElement = titleref.current;
+        if (!homeHeroTitleElement) return;
+
+        const workTitle = new SplitType(homeHeroTitleElement);
+        const workTitleSplit = workTitle?.chars;
+        gsap.fromTo(
+            workTitleSplit,
+            { opacity: 0, y: 100 },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.02,
+                duration: 1.2,
+                ease: "power3",
+                scrollTrigger: {
+                    trigger: workTitleSplit,
+                },
+            }
+        );
+
+        imageRef.current.forEach((imageContainer: any, index: any) => {
+            gsap.fromTo(
+                imageContainer,
+                { opacity: 0, y: 350 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.14,
+                    duration: 2,
+                    delay: .3 * index,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: imageContainer,
+                    },
+                }
+            );
+        })
+    }, [])
+
+    const AddImageToRefs = (ref: any) => {
+        if (ref && !imageRef.current.includes(ref!)) {
+            imageRef.current.push(ref!)
+        }
+    }
     return <>
         <div data-scroll data-scroll-speed='4' className='w-full'>
             {/* <h2 className="fontextrabold text-4xl">Services section</h2> */}
             <div className=" w-full pt-32 pb-32">
                 <div className="w-[90%] max-w-custom_1 mx-auto flex flex-col gap-20">
                     <div className="w-full">
-                        <h2 className="text-4xl font-bold font-Agency_medium text-white">
-                            Offering a variety of
+                        <h2 ref={titleref} className="text-4xl flex flex-col font-bold font-Agency_medium text-white">
+                            <span>
+                                Offering a variety of
+                            </span>
                             <span className="block">
                                 high-end services
                             </span>
@@ -39,14 +97,16 @@ const Services = () => {
                     <div className="w-full grid text-white sm:grid-cols-2 xl:grid-cols-4 grid-cols-2 gap-12">
                         {
                             servicedata.map((x?: any, index?: any) => {
-                                return <div key={index} className="flex flex-col gap-4 md:gap-8 font-bold font-Agency_medium">
-                                    <img src={x?.image} alt="" className="w-10" />
-                                    <div className="flex font-medium flex-col gap-4 lg:gap-8">
-                                        <h4 className="text-xl font-Agency_light">{x?.title}</h4>
-                                        <h5 className="text-base font-Agency_light">{x?.description}</h5>
+                                return <div key={index} className="w-full overflow-hidden px-4 py-2">
+                                    <div ref={AddImageToRefs} key={index} className="flex flex-col gap-4 md:gap-8 font-bold font-Agency_medium">
+                                        <img src={x?.image} alt="" className="w-10" />
+                                        <div className="flex font-medium flex-col gap-4 lg:gap-8">
+                                            <h4 className="text-xl font-Agency_light">{x?.title}</h4>
+                                            <h5 className="text-base font-Agency_light">{x?.description}</h5>
+                                        </div>
+
+
                                     </div>
-
-
                                 </div>
                             })
                         }

@@ -27,17 +27,17 @@ const Hero = () => {
 
         }, 1).fromTo(home_text_1.chars, { y: 100, opacity: 0 }, {
             y: 0,
-            ease: 'power3',
-            duration: .7,
-            stagger: .05,
-            opacity: 1
-        }, 2.4).fromTo(home_text_2.words, { y: 60, opacity: 0 }, {
+            opacity: 1,
+            stagger: 0.07,
+            duration: 1.2,
+            ease: "power3",
+        }, 2).fromTo(home_text_2.words, { y: 60, opacity: 0 }, {
             y: 0,
             ease: 'power3',
             duration: 1,
             stagger: .05,
             opacity: 1
-        }, 3.2).fromTo('.content_2', { y: 100, opacity: 0 }, {
+        }, 3).fromTo('.content_2', { y: 100, opacity: 0 }, {
             y: 0,
             ease: 'power3',
             duration: 1,

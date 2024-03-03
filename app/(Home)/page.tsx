@@ -14,19 +14,7 @@ import { Loader } from '@/components/common/Loader';
 import SplitType from 'split-type';
 
 export default function Home() {
-  const Homeref = useRef<null | HTMLDivElement>(null);
-  let locoScroll: LocomotiveScroll;
-  let LocomotiveScroll: new (arg0: { el: HTMLDivElement; smooth: boolean; multiplier: number; class: string; }) => LocomotiveScroll;
-  if (typeof window !== 'undefined') {
-    LocomotiveScroll = require('locomotive-scroll').default;
-  }
-
-
   const [menu, setMenu] = useState(false)
-
-
-
-
   return (
     <>
       <Loader />
