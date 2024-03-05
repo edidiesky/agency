@@ -11,7 +11,7 @@ type HeaderProps = {
 export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
   const [active, setActive] = useState(false)
   return (
-    <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-40">
+    <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-50">
       <div className="w-[90%] m-auto max-w-custom flex items-center justify-between">
         <h2 className={`text-2xl md:text-4xl ${type ? 'text-[#fff]' : 'text-[#Fff]'}`}>
           <span className="font-Agency_Extended">ONE: </span> <span style={{letterSpacing:"3px"}} className="text-light font-Agency_light">NILL</span></h2>
@@ -41,9 +41,9 @@ export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
 
           {/*  */}
           {
-            type ? <div onClick={() => setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer text-text_dark_1 text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
+            type ? <div onClick={() => setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer z-50 relative text-text_dark_1 text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
               <HiBars2 />
-            </div> : <div onClick={() => setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer text-white text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
+            </div> : <div onClick={() => setMenu(!menu)} className={"icons w-12 h-12 cursor-pointer z-50 relative text-white text-xl md:text-3xl hover:bg-[rgba(180,180,180,.2)] hover:transform hover:-translate-y-1 transition ease-in duration-300 rounded-full flex items-center justify-center"}>
               <HiBars2 />
             </div>
           }
