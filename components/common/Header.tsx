@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button";
 import { HiBars2 } from "react-icons/hi2";
@@ -13,15 +15,17 @@ export const Header: React.FC<HeaderProps> = ({ menu, setMenu, type }) => {
   return (
     <div className="py-8 pb-5 fixed w-full md:px-12 top-0 z-50">
       <div className="w-[90%] m-auto max-w-custom flex items-center justify-between">
-        <h2 className={`text-2xl md:text-4xl ${type ? 'text-[#fff]' : 'text-[#Fff]'}`}>
-          <span className="font-Agency_Extended">ONE: </span> <span style={{letterSpacing:"3px"}} className="text-light font-Agency_light">NILL</span></h2>
+        <Link href={'/'} className={`text-2xl md:text-4xl ${type ? 'text-[#fff]' : 'text-[#Fff]'}`}>
+          <span className="font-Agency_Extended">ONE:
+          </span> <span style={{ letterSpacing: "3px" }} className="text-light font-Agency_light">NILL</span>
+        </Link>
         <div className="flex items-center gap-4">
           {
             !type && <div
               onMouseLeave={() => setActive(false)}
               onMouseOver={() => setActive(true)}
 
-              className="h-14 cursor-pointer relative overflow-hidden min-w-52 rounded-[40px] text-lg bg-transparent text-text_dark_1 font-Agency_medium font-normal">
+              className="h-14 cursor-pointer relative overflow-hidden min-w-52 rounded-[40px] bg-[#Fff] text-lg text-text_dark_1 font-Agency_medium font-normal">
               <motion.div
                 animate={{ top: active ? '-100%' : "0" }}
                 transition={{ duration: .5, ease: [0.75, 0, 0.24, 1] }}

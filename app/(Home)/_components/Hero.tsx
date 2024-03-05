@@ -25,25 +25,25 @@ const Hero = () => {
             display: "none",
             duration: 1,
 
-        }, 1).fromTo(home_text_1.chars, { y: 100, opacity: 0 }, {
+        }, .8).fromTo(home_text_1.words, { y: 100, opacity: 0 }, {
             y: 0,
             opacity: 1,
-            stagger: 0.07,
-            duration: 1.2,
-            ease: "power3",
-        }, 2).fromTo(home_text_2.words, { y: 60, opacity: 0 }, {
+            stagger: 0.13,
+            duration: 1.6,
+            ease: "power4.inOut",
+        }, 2).fromTo(home_text_2.words, { y: 20, opacity: 0 }, {
+            y: 0,
+            ease: 'power3',
+            duration: .4,
+            stagger: .04,
+            opacity: 1
+        }, 4).fromTo('.content_2', { y: 100, opacity: 0 }, {
             y: 0,
             ease: 'power3',
             duration: 1,
             stagger: .05,
             opacity: 1
-        }, 3).fromTo('.content_2', { y: 100, opacity: 0 }, {
-            y: 0,
-            ease: 'power3',
-            duration: 1,
-            stagger: .05,
-            opacity: 1
-        }, 4)
+        }, 5)
     }, [])
     return <div data-scroll style={{ minHeight: "100vh" }} className=' relative w-full flex z-20 items-center justify-center'>
         <div className="absolute h-full w-full bg-[rgba(0,0,0,.7)] z-10"></div>
@@ -61,9 +61,9 @@ const Hero = () => {
                     </h1>
                 </div>
                 <div className="overflow-hidden">
-                    <span className="block text-lg home_text_2 font-normal text-white w-[90%] lg:w-[450px] font-Agency_medium">
+                    <h4 className="block text-lg home_text_2 font-normal text-white w-[90%] lg:w-[450px] font-Agency_medium">
                         We create winning ideas to ignite the most distinctive campaigns in sports.
-                    </span>
+                    </h4>
                 </div>
             </div>
             <div className="w-full content_1 h-full px-12 flex items-center justify-center">
