@@ -32,7 +32,7 @@ module.exports = {
         light_grey: "#F6F5F4",
       },
       maxWidth: {
-        custom_1: "1004px",
+        custom_1: "1104px",
         custom_2: "804px",
       },
       boxShadow: {
